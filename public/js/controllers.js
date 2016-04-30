@@ -46,13 +46,30 @@ app.controller('listCtrl', function($q, Characters, $scope, $state, $stateParams
 })
 
 app.controller('detail', function($scope, $state, $q, Characters, $stateParams) {
-	Characters.getByName()
+	Characters.getAll()
 	.then(result => {
-		$scope.characters = result.data;
-		console.log('chars:', $scope.characters);	
+		$scope.characters = result.data.results;
+		$scope.next = result.data.next;
+		$scope.previous = result.data.previous;
+		console.log($scope.characters);
+		
 	})
 	.catch(err => {
 		console.log('err:', err);
 	})
+
+	$scope.getByName = function() {
+		Characters.getByName($state.params.id)
+		console.log($state.params.id)
+		
+	.then(result => {
+		$scope.character = result.url
+		console.log('result', $scope.character)
+	
+	})
+	.catch(err => {
+		console.log('err:', err);
+	})
+	}
 });
 

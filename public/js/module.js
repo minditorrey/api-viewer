@@ -1,6 +1,6 @@
 var app = angular.module('apiApp', ['ui.router']);
 
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider) {
 
 	$stateProvider
 		.state('list', {
@@ -9,7 +9,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			controller: 'listCtrl'
 		})
 		.state('detail', {
-			url: '/detail/:character',
+			url: '/detail/:id',
 			templateUrl: '/html/detail.html',
 			controller: 'detail',
 			// resolve: {
@@ -21,10 +21,5 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		})
 
 
-
-
-
-
-$urlRouterProvider.otherwise('/');
 
 });
