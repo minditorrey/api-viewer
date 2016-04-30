@@ -1,0 +1,42 @@
+body {
+	background-color: black;
+	color: #f0ad4e;
+}
+
+
+.well {
+ 	margin-left: 10%;
+ 	margin-right: 10%;
+ 	margin-top: 5%;
+    box-shadow: inset 5px 5px 8px black;
+    border-radius: 70%;
+    text-align: center;
+    background-color: #dddbd7;
+}
+ }
+
+ h1 {
+ 	font-size: 56px;
+ }
+
+ p {
+	font-size: 18px;
+	margin-left: 10%;
+	margin-bottom: 25px;
+}
+
+
+h2 {
+	font-size: 32px;
+}
+
+   
+ul {
+    list-style-type: none;
+    text-align: center;
+    font-size: 18px;
+}
+
+.explore {
+	margin-top: 3%;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>API VIEWER</title>
+  <!-- <link rel="stylesheet" href="/bower_components/sweetalert/dist/sweetalert.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="/bower_components/angular/angular.min.js"></script>
+  <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!--<script src="/bower_components/ngSweetAlert/SweetAlert.min.js"></script>
+    <script src="/bower_components/sweetalert/dist/sweetalert.min.js"></script> -->
+
+  <script src="/js/module.js"></script>
+  <script src="/js/controllers.js"></script>
+  <script src="/js/services.js"></script>
+</head>
+<body ng-app='apiApp'>
+<div class="container-fluid">
+    <h1>Star Wars Shenanigans</h1>
+        <p>Explore your favorite Star Wars characters!</p>
+    <div class="well">
+  
+    <button class="btn btn-lg btn-warning explore" ui-sref='list'>Explore!</button>
+   
+
+  <!-- Where the templates go! -->
+  <ui-view></ui-view>
+  
+  <!--  -->
+    </div>
+</div>
+</body>
+</html>
