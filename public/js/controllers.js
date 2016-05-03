@@ -2,6 +2,7 @@
 
 var app = angular.module('apiApp');
 
+
 app.controller('listCtrl', function($q, Characters, $scope, $state, $stateParams) {
 	Characters.getAll()
 	.then(result => {
@@ -63,7 +64,7 @@ app.controller('detail', function($scope, $state, $q, Characters, $stateParams) 
 		console.log($state.params.id)
 		
 	.then(result => {
-		$scope.character = result.url
+		$scope.character = result.data.results
 		console.log('result', $scope.character)
 	
 	})
